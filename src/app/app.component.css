@@ -1,0 +1,30 @@
+.Table {
+  margin: auto;
+  width: 800px;
+  height: 800px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: ridge #ddb063 8px;
+}
+.row {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.column {
+  width: inherit;
+  height: 100%;
+  width: 100%;
+  background-size: inherit;
+}
+.player {
+  height: 77px;
+    width: 77px;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 11%;
+}
