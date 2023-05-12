@@ -10,7 +10,7 @@
             ? '#91511c'
             : 'sandybrown'
       }"
-      (click)="test(rowIndex, columnIndex)"
+      (click)="clickFunc(rowIndex, columnIndex)"
     >
       <div
         *ngIf="cell == 1"
@@ -38,6 +38,13 @@
             grey 80%,
             black 20%
           );
+        "
+      ></div>
+      <div
+        *ngIf="cell == 5"
+        class="player"
+        style="
+          background-color: #007a003b;
         "
       ></div>
     </div>
