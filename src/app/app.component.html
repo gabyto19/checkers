@@ -1,21 +1,17 @@
 <div class="Table">
   <div class="row" *ngFor="let row of rows; let rowIndex = index">
-    <div
-      class="column"
-      *ngFor="let cell of row; let columnIndex = index"
-      [ngStyle]="{
-        'background-color':
-          (rowIndex % 2 == 0 && columnIndex % 2 == 0) ||
-          (rowIndex % 2 == 1 && columnIndex % 2 == 1)
-            ? '#91511c'
-            : 'sandybrown'
-      }"
-      (click)="clickFunc(rowIndex, columnIndex)"
-    >
-      <div
-        *ngIf="cell == 1"
-        class="player"
-        style="
+    <div class="column" *ngFor="let cell of row; let columnIndex = index"
+     [ngStyle]="{
+      'background-color':
+      (rowIndex === bgSaver[0] && columnIndex === bgSaver[1])
+        ? '#df761f'
+        : ((rowIndex % 2 === 0 && columnIndex % 2 === 0) ||
+           (rowIndex % 2 === 1 && columnIndex % 2 === 1))
+          ? '#91511c'
+          : 'sandybrown',
+      }" 
+      (click)="clickFunc(rowIndex, columnIndex)">
+      <div *ngIf="cell == 1" class="player" style="
           background-image: radial-gradient(
             grey 0%,
             white 30%,
@@ -24,12 +20,8 @@
             grey 80%,
             white 20%
           );
-        "
-      ></div>
-      <div
-        *ngIf="cell == 2"
-        class="player"
-        style="
+        "></div>
+      <div *ngIf="cell == 2" class="player" style="
           background-image: radial-gradient(
             grey 4%,
             black 20%,
@@ -38,15 +30,10 @@
             grey 80%,
             black 20%
           );
-        "
-      ></div>
-      <div
-        *ngIf="cell == 5"
-        class="player"
-        style="
+        "></div>
+      <div *ngIf="cell == 5" class="player" style="
           background-color: #007a003b;
-        "
-      ></div>
+        "></div>
     </div>
   </div>
 </div>
