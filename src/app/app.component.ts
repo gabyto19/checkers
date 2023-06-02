@@ -21,7 +21,7 @@ export class AppComponent {
   //save the figure when it clicked
   figureSaver: any = [0, 0];
   switcher = false;
-  bla = -1;
+  bla = 0;
 
   clickFunc(rows: any, column: any) {
     console.log(
@@ -29,6 +29,9 @@ export class AppComponent {
       '  Columns: ' + column,
       '   value: ' + this.rows[rows][column]
     );
+    console.log(++this.bla);
+    console.log(this.bla);
+    
 
     //Whites
     if (this.rows[rows][column] == 1 && !this.switcher) {
